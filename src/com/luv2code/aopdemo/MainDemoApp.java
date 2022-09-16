@@ -17,12 +17,13 @@ public class MainDemoApp {
 		
 		
 		// call the buisnes method
-		theAccountDAO.addAccount();
+		Account myAccount = new Account();
+		theAccountDAO.addAccount(myAccount);
 		
 		
 		// lo llamamos otra vez
 		System.out.println("Lo llamamos otra vez ");
-		theAccountDAO.addAccount();
+		theAccountDAO.addAccount(myAccount);
 		
 		System.out.println("LLamamos al addAccount de membership ");
 		MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);

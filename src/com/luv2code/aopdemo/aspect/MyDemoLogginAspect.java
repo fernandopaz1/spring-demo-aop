@@ -15,7 +15,7 @@ public class MyDemoLogginAspect {
 	// este aspect se va a ajecutar para todos los metodos con la signature public void addAccount()
 	// el pointcut expresion es el predicado que matchea el metodo
 	// sobre el cual el advice deberia ejecutarse
-	@Before("execution(public void addAccount())")
+	@Before("execution(* add*(com.luv2code.aopdemo.Account))")
 	public void beforeAddAccountAdvice() {
 		System.out.println("\n======>>> Executing @Before advice");
 	}
